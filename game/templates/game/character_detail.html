@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detalles del Personaje</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Detalles del Personaje: {{ character.name }}</h1>
+        <p><strong>Descripción:</strong> {{ character.description }}</p>
+        <h2>Habilidades</h2>
+        <ul>
+            <li><strong>Habilidad 1:</strong> {{ character.skill_1 }}</li>
+            <li><strong>Habilidad 2:</strong> {{ character.skill_2 }}</li>
+            <li><strong>Habilidad 3:</strong> {{ character.skill_3 }}</li>
+            <li><strong>Habilidad 4:</strong> {{ character.skill_4 }}</li>
+            <li><strong>Habilidad 5:</strong> {{ character.skill_5 }}</li>
+        </ul>
+        <a href="{% url 'character_list' %}">Volver a la lista</a>
+    </div>
+</body>
+</html>
+

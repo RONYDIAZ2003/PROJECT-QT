@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project QT</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Project QT</h1>
+        <p>Fecha de creación de la página: {{ current_datetime }}</p>
+        <p>Project QT es un juego de estrategia y rol donde los jugadores se embarcan en una aventura para salvar el mundo de una invasión alienígena. Con un elenco diverso de personajes, los jugadores deben formar equipos, entrenar a sus héroes y enfrentar desafíos épicos. El juego fue creado en el año 2018 y ha capturado la imaginación de los jugadores con su combinación única de acción y estrategia.</p>
+        
+        <h2>Requisitos del Juego</h2>
+        <table>
+            <tr>
+                <th>Requisito</th>
+                <th>Descripción</th>
+            </tr>
+            <tr>
+                <td>Sistema Operativo</td>
+                <td>Android 5.0 o superior / iOS 10.0 o superior</td>
+            </tr>
+            <tr>
+                <td>Memoria RAM</td>
+                <td>2 GB o más</td>
+            </tr>
+            <tr>
+                <td>Espacio de Almacenamiento</td>
+                <td>Al menos 1 GB de espacio libre</td>
+            </tr>
+            <tr>
+                <td>Conexión a Internet</td>
+                <td>Requerida para funciones en línea y actualizaciones</td>
+            </tr>
+        </table>
+
+        <h2>Personajes del Juego</h2>
+        <img src="{% static 'images/characters.jpg' %}" alt="Personajes de Project QT" class="characters-image">
+        
+        <a href="{% url 'character_list' %}">Ver lista de personajes</a>
+    </div>
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Búsqueda de Personajes</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Búsqueda de Personajes</h1>
+        <form method="get">
+            <input type="text" name="q" placeholder="Buscar por nombre...">
+            <button type="submit">Buscar</button>
+        </form>
+        {% if characters %}
+        <ul>
+            {% for character in characters %}
+            <li>{{ character.name }}: {{ character.description }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+</body>
+</html>
+
+

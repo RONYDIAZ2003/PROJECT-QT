@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enviar Correo</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Enviar Correo de Prueba</h1>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit">Enviar Correo</button>
+        </form>
+        <a href="{% url 'homepage' %}">Volver al Inicio</a>
+    </div>
+</body>
+</html>
